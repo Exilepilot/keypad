@@ -41,11 +41,10 @@ outputDebugString("Attempting to create database return: "..tostring(v))
 
 --------------------------------------------
 -- By giving the keycode we get the
--- seed for the TEA encrypt function
--- by using the formula: PASS = x^2 / sin(50)
+-- seed by using the formula: PASS = x^2 / sin(50)
 -- where x is the 9 digit keycode.
 --------------------------------------------
-function getTEASeed (n)
+function getSeed (n)
 	if type(n) ~= "number" then n = tonumber(n); assert(n ~= false, "Woops") end
 
 	return (n^2)/math.sin(50)
@@ -82,7 +81,7 @@ end
 function registerUser(pass, user)
 	if #pass == 9 and user ~= nil then
 		if not nameAlreadyExist(user) then
-			local seed = getTEASeed(pass)
+			local seed = getSeed(pass)
 			if type(seed) == "number" then
 				local t = executeSQLQuery(querys[2], user, base64Encode(seed))
 				outputDebugString("Registered user, return: "..tostring(t))
