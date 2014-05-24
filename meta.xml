@@ -11,9 +11,7 @@ by a keypad system similar to applications
 such as key less doorlocks and such.
 
 This actually lowers security however
-the main challenge is to highten the security
-by using some algorithm that converts the
-numbers into ASCII and hash them with salt.
+the main challenge is to highten the security.
 ;;;;;;;;;;;;;;;;;;;;;;;;-->
 
 
