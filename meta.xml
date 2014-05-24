@@ -1,0 +1,23 @@
+<!--;;;;;;;;;;;;;;;;;;;;;;;
+
+AUTHOR OF SCRIPT - PILOT
+
+DESCRIPTION:
+Creates a different experience when
+logging into your account. Instead
+of using a password with unicode
+characters you use numbers instead
+by a keypad system similar to applications
+such as key less doorlocks and such.
+
+This actually lowers security however
+the main challenge is to highten the security
+by using some algorithm that converts the
+numbers into ASCII and hash them with salt.
+;;;;;;;;;;;;;;;;;;;;;;;;-->
+
+
+<meta>
+	<script src="client.lua" type="client"/>
+	<script src="server.lua" type="server"/>
+</meta>
